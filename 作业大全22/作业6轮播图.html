@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 550px;
+            height: 310px;
+            border: 2px solid black;
+            margin: 50px auto 0;
+            position: relative;
+        }
+        .box #shang{
+            display: block;
+           
+            position: absolute;
+            left: 20px;
+            bottom: 150px;
+            margin-top: 14.5px;
+            /* background-color: brown;  */
+        }
+        .box #xia{
+            display: block;
+            /* height: 60px; */
+            position: absolute;
+            right: 20px;
+            bottom:150px;
+            margin-top: 14.5px;
+            /* background-color: aquamarine; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <img src="./imges2/img01.jpg" id="da"/>
+        <img src="./imges2/4462904a5affdce6b812b3ad1497ecd.png" id="shang"/>
+        <img src="./imges2/9527873561712f16da9751a8be1fd92.png" id="xia"/>
+    </div>
+    <script>
+        //  var da = document.getElementById("da")
+        // 获取元素
+        var img1 = document.getElementById("shang")
+            img2 = document.getElementById("xia")
+            img3 = document.getElementById('da')
+        var num = 1
+
+       img1.onclick=function(){
+        num = num + 1
+            if(num == 5){
+                num = 1
+            }
+            img3.src = './imges2/img0' + num + '.jpg';
+           }
+        img2.onclick=function(){
+            num = num + 1
+            if(num == 5){
+                num = 1
+            }
+            img3.src = './imges2/img0' + num + '.jpg';
+        }
+    </script>
+</body>
+</html>

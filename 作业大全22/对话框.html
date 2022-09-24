@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 200px;
+            height: 250px;
+            margin: 20px auto 0;
+            border: 5px solid#ccc;
+            background-color: bisque;
+
+        }
+
+        #win {
+            background-image: url(./imges/1.webp);
+            background-size: 200px 150px;
+            background-color: #fff;
+            height: 150px;
+        }
+
+        #msg {
+            width: 140px;
+            border: 2px solid darkblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="win"></div>
+        <div>
+            <input type="text" id="msg">
+            <button id="btn">发送</button>
+        </div>
+    </div>
+    <script>
+        // 获取元素
+        var oInput = document.getElementById('msg')
+        var oBth = document.getElementById('btn')
+        var oDiv = document.getElementById('win')
+        var msg=''
+        // 点击obtn，读取oInput的value属性写入 oDiv 内容里面
+        oBth.onclick = function () {
+            if (oInput.value == '') {
+                window.alert("小老弟，来点文字")
+               
+            } else {
+                msg = oInput.value
+                oDiv.innerHTML =  oDiv.innerHTM+'<p>' + msg + '</P>' 
+                oInput.value = ''
+            }
+
+
+        }
+    </script>
+</body>
+
+</html>

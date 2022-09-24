@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div>
+        <input id="as" type="text" placeholder="请输入成绩" value="">
+        <button id="box">按钮</button>
+    </div>
+    <script>
+        var as = document.getElementById('as')
+        var box = document.getElementById('box')
+
+        var on=0
+    
+        box.onclick=function(){
+
+            on=as.value
+
+            if(on>=90 && on<=100){
+                window.alert(on+'你太棒了')
+                as.value=''
+            }
+            else if(on>=80 && on<90){
+                 window.alert(on+'很好')
+                 as.value=''
+            }
+            else if(on>=70 && on<80){
+                window.alert(on+'成绩一般')
+                as.value=''
+            }
+            else if(on>=60 && on<70){
+                window.alert(on+'及格')
+                as.value=''
+            }
+            else if(on>=101 && on<200){
+                window.alert(on+'你太太棒了')
+                as.value=''
+            }
+            else if(on>=200){
+                window.alert(on+'一般')
+                as.value=''
+            }
+            else{
+                window.alert(on+'你要努力了')
+                as.value=''
+            }
+        }
+    </script>
+</body>
+</html>

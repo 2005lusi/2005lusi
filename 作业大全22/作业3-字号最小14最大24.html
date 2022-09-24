@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id='a0'>-</button>
+    <button id="a4">+</button>
+    <p id="div1"> 10月28日晚，中央纪委监察部官网发布消息，贵州省委常委、遵义市委书记廖少华因涉嫌严重违纪违法接受组织调查。3天后中组部宣布对其免职。廖成为十八大后中纪委一连串"打虎"行动中第十一位落马的副省部级以上高官。</p>
+      
+    
+    <script>
+        // 获取元素
+        var a14/ = document.getElementById('a0')
+        var a24 = document.getElementById('a4')
+        var nr = document.getElementById('div1')
+        var num=16
+        //点击-号，让nr为0，点击+号，让nr为4
+
+    //    变小14
+
+        a14.onclick = function () {
+           
+            // if (num>14){
+            num=num -1
+            if(num<14){
+            num=14
+           }
+            nr.style.fontSize=num+'px'  
+        // }else{
+            // num
+            // nr.style.fontSize=num+'px'
+        // }
+    }
+        // 变大24
+        a24.onclick = function (){
+           
+        //    if (num<24){ 
+           num=num +1
+           if(num>24){
+            num=24
+           }
+           nr.style.fontSize=num+'px'  
+    //    }else{
+    //        num
+    //        nr.style.fontSize=num+'px'
+    //    } 
+    }
+    </script>
+</body>
+
+</html>

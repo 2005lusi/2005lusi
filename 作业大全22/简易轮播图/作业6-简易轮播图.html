@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		.slider {
+			position: fixed;
+			left: 50%;
+			margin-left: -280px;
+			top: 20px;
+			width: 550px;
+			height: 310px;
+			border: 5px solid #000;
+		}
+
+		.imgbox {
+			width: 550px;
+			height: 310px;
+			position: relative;
+		}
+
+		.arrow {
+			position: absolute;
+			top: 50%;
+			margin-top: -13px;
+		}
+
+		.arrowl {
+			left: 10px;
+		}
+
+		.arrowr {
+			right: 10px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="slider">
+		<section class="imgbox">
+			<img class="img" src="images/img01.jpg" alt="">
+			<img class="arrow arrowl" src="images/5.png" alt="上一张">
+			<img class="arrow arrowr" src="images/6.png" alt="下一张">
+		</section>
+	</div>
+
+	<script>
+		//获取元素
+		var oArrowR = document.querySelector('.arrowr'),
+			oArrowL = document.querySelector('.arrowl'),
+			oImg = document.querySelector('.img')
+		var num = 1;
+
+		//初始化
+
+
+		//点击右侧箭头 切换图片地址 切换描述文字
+		oArrowR.onclick = function () {
+			// alert(num)
+			num++
+			if (num > 4) {
+				//num = num < 4 ? ++num : 1;
+				num = 1;
+			}
+			oImg.src = 'images/img0' + num + '.jpg';
+		}
+
+		//点击左侧箭头 切换图片地址 切换描述文字
+		oArrowL.onclick = function () {
+			num--
+			if (num < 1) {
+				//num = num < 4 ? ++num : 1;
+				num = 4;
+			}
+			oImg.src = 'images/img0' + num + '.jpg';
+		}
+
+
+	</script>
+</body>
+
+</html>

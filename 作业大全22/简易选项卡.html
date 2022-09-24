@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+ color: #333;
+ background-color: rgb(255, 255, 255);
+ margin: 16px 10%;
+}
+
+p {
+ color: #fff;
+}
+
+a {
+ color: #FFFF00;
+ text-decoration: none;
+}
+
+ul {
+ padding: 0px;
+}
+
+li {
+ float: left;
+ padding-top: 9px;
+ padding-left: 960px;
+ list-style: none;
+}
+        .tabs {
+            width: 500px;
+            height: 200px;
+            border: 1px solid red;
+            margin: 100px;
+        }
+
+        .tab {
+            height: 30px;
+        }
+
+        .content {
+            height: 170px;
+            background-color: yellow;
+        }
+
+        .content div {
+            border: 1px solid black;
+            display: none;
+            height: 170px;
+        }
+
+        .content div:first-child {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tabs">
+        <div class="tab">
+            <a id='a1' style="background-color: ;red" href="#"><button>百 度 百 度</button></a>
+            <a id='a2' href="#"> <button>新 浪</button></a>
+            <a id='a3' href="#"><button>微 博</button></a>
+        </div>
+        <div class="content">
+            <div id="a">不要总是拿自己跟别人比，你羡慕别人瘦，别人还羡慕你肠胃好，你羡慕别人有钱，别人还羡慕没人找你借钱。</div>
+            <div id="b">人的一生注定会遇到两个人，一个惊艳了时光、一个温柔了岁月。</div>
+            <div id="c">有人辱你，骂你，刁难你，诬陷你；你且夸他，赞他，捧他，惯着他。等惯出了暴脾气，自然有人抽他，打他，骂他，收拾他。</div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('a2').onclick = function () {
+            document.getElementById('b').style.display = "block"
+            document.getElementById('a').style.display = "none"
+           document.getElementById('c').style.display='none' 
+          }
+          document.getElementById('a3').onclick = function () {
+            document.getElementById('c').style.display = "block"
+            document.getElementById('a').style.display = "none"
+           document.getElementById('b').style.display='none' 
+          }
+          document.getElementById('a1').onclick = function () {
+            document.getElementById('a').style.display = "block"
+            document.getElementById('b').style.display = "none"
+           document.getElementById('c').style.display='none' 
+          }
+    </script>
+</body>
+
+</html>

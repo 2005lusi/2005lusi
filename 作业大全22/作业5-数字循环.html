@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+        <button class="minus">-</button>
+        <input class="item" type="text" value="0">
+        <button class="plus">+</button>
+        <script>
+            //获取元素
+            var oBtn1 = document.querySelector('.minus'),
+                oBtn2 = document.querySelector('.plus'),
+                oItem = document.querySelector('.item');
+            //点击按钮+，数字自增1；
+            oBtn2.onclick = function(){                
+                //oItem.value <=3 ? oItem.value++ : oItem.value = 0;  
+				oItem.value++
+				if (oItem.value > 4) {
+					oItem.value = 0
+				}
+            }
+            oBtn1.onclick = function(){                
+                //oItem.value > 0 ? oItem.value-- : oItem.value = 4; 
+				oItem.value--
+				if (oItem.value < 0 ) {
+					oItem.value = 4
+				}
+            }
+        </script>
+    </div>
+</body>
+</html>

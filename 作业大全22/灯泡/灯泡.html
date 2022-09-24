@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .deng {
+            width: 500px;
+            height: 200px;
+            margin: 100px;
+            position: relative;
+        }
+
+        .xiaodeng {
+            width: 300px;
+            height: 200px;
+            position: absolute;
+            right: 50px;
+        }
+
+        .tupian {
+            width: 200px;
+            height: 500px;
+            position: absolute;
+            right:1000px;
+            top: 4px;
+          
+        }
+
+        .tupian div {
+            /* border: 1px solid black; */
+            display: none;
+            height: 170px;
+        }
+
+        .tupian div:first-child {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="deng">
+        <div class="xioadeng">
+            <button id="on">开</button>
+            <button id="off">关</button>
+        </div>
+    </div>
+    <div class="tupian">
+        <div id="c"><img src="./imges/eg_bulboff.gif"></div>
+        <div id="b"><img src="./imges/eg_bulbon.gif"></div>
+    </div>
+    <script>
+ document.getElementById('off').onclick = function () {
+            document.getElementById('c').style.display = "block"
+            document.getElementById('b').style.display = "none"
+          }
+          document.getElementById('on').onclick = function () {
+            document.getElementById('b').style.display = "block"
+            document.getElementById('c').style.display = "none"
+          }
+    </script>
+</body>
+
+</html>

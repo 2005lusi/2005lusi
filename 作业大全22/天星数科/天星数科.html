@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* **************重置浏览器默认样式****************** */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* *************全局****************** */
+        .page {
+            width: 1000px;
+            margin: 0 auto;
+            /* background-color:rgba(168, 222, 243, 0.661); */
+        }
+
+        body {
+            font: 16px/1.5 'MI Lan Pro', Arial, 'Microsoft YaHei', '黑体', '宋体', sans-serif;
+        }
+
+        ul,
+        li {
+            list-style: none;
+        }
+
+        /*********** 全局 ************/
+        /* *header*** */
+        header {
+            /* justify-content: center; */
+            background-color: white;
+            height: 76px;
+
+        }
+
+        header nav a {
+            /* background-color: rgba(168, 222, 243, 0.661); */
+            text-decoration: none;
+            color: black;
+            /* position: absolute; */
+            /* left: 0; */
+        }
+
+        .header .logo {
+            flex-grow: 1;
+            /* width: 140px; */
+            /* background-color: rgba(168, 222, 243, 0.661)e; */
+        }
+
+        header .logo img {
+            width: 140px;
+        }
+
+        .header nav {
+            flex-grow: 1;
+            /* width: 860px; */
+
+        }
+
+        header nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+            position: relative;
+
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            height: 76px;
+            line-height: 76px;
+        }
+
+        /* 导航交互 */
+        #line {
+            display: flex;
+            width: 40px;
+            height: 5px;
+            background-color: blue;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            transition: .3s;
+        }
+
+        /* *********主体************* */
+        .body {
+            background-color: rgb(252, 189, 105);
+            width: 1000px;
+            margin: 0 auto;
+        }
+
+        .slider:nth-child(1) {
+            background-image: url(./images/top-banner.3daf51a.png);
+            background-size: 900px;
+            height: 484px;
+        }
+
+        .slider {
+            position: relative;
+        }
+
+        .h1 {
+            position: absolute;
+            left: 250px;
+            top: 150px;
+            font-size: 40px;
+            letter-spacing: 10px;
+            /* text-align: center; */
+        }
+
+        .h2 {
+            position: absolute;
+            left: 250px;
+            top: 200px;
+            font-size: 40px;
+            letter-spacing: 10px;
+        }
+
+
+        .about {
+            height: 263px;
+        }
+
+        .product-service {
+            height: 1062px;
+        }
+
+        .product {
+            overflow: hidden;
+        }
+
+        .product li {
+            width: 495px;
+            /* height: 260px;  */
+            background-color: rgb(124, 238, 173);
+            background-size: cover;
+            float: left;
+        }
+
+        .product li:nth-child(1) {
+            background-image: url("./images/box-chain.1264a7c.png");
+        }
+
+        .product li:nth-child(2) {
+            background-image: url("./images/box-finance.332c2ae.png");
+        }
+
+        .product li:nth-child(3) {
+            background-image: url("./images/box-fintech.a950588.png");
+        }
+
+        .product li:nth-child(4) {
+            background-image: url("./images/box-insurance.9bfeded.png");
+        }
+
+        .product li:nth-child(5) {
+            background-image: url("./images/box-wallet.322e8da.png");
+        }
+
+        .partne {
+            height: 497px;
+        }
+
+        .partner img {
+            width: 190px;
+            height: 84px;
+        }
+
+        .service {
+            overflow: hidden;
+        }
+
+        .service li {
+            width: 241px;
+            height: 224px;
+            float: left;
+        }
+
+        .service img {
+            width: 72px;
+            height: 72px;
+        }
+
+        .partner {
+            overflow: hidden;
+        }
+
+        .partner li {
+            width: 190px;
+            height: 84px;
+            float: left;
+        }
+
+        /* *页脚*** */
+        footer {
+            height: 500px;
+            /* width: 100%; */
+            background-color: rgb(214, 120, 245);
+
+        }
+
+        footer .erweima img {
+            width: 100px;
+            height: 100px;
+        }
+
+        footer .erweima {
+            float: left;
+            width: 100px;
+        }
+
+        footer .hang1 .lan2 ul {
+            overflow: hidden;
+        }
+
+        footer .hang1 .lan2 ul {
+            float: left;
+            padding: 5px 10px;
+        }
+
+        footer .hang1 .lan1 {
+            float: left;
+            width: 65%;
+        }
+
+        footer .hang1 .lan2 {
+            float: left;
+            width: 35%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="page header">
+            <div class="logo">
+
+                <img src="./images/logo.8e6b0dc.png">
+            </div>
+            <nav>
+                <a href="#" id="a1" style="background-color: white;">首页</a>
+                <a href="#" id="a2" style="background-color: white;">产业金融服务</a>
+                <a href="#" id="a3" style="background-color: white;">金融科技服务</a>
+                <a href="#" id="a4" style="background-color: white;">个人金融服务</a>
+                <a href="#" id="a5" style="background-color: white;">经营证照</a>
+                <a href="#" id="a6" style="background-color: white;">关于我们 </a>
+                <span id="line"></span>
+            </nav>
+            <!-- 点击任何一个a标签的时候，让span移动到当前点击的a标签的下方 -->
+        </div>
+    </header>
+    <section class="body">
+        <div class="pege">
+            <section class="slider">
+                <h2 class="h1"> 数字科技服务实体经济</h2>
+
+                <h2 class="h2">开放连接践行普惠金融</h2>
+            </section>
+            <section class="about">
+                <p>天星数科（原小米数科)是小米集团旗下数字科技服务平台。随着5G+万物互联时代来临，天星数科将依托小米集团“手机×AIoT”战略，
+                    秉承小米集团技术立业的传统，保持行稳致远的节奏，发挥深耕产业的优势，通过开放连接的平台模式，运用数字科技手段，不断自我提升，服务好实体企业的产业金融需求、服务好金融机构的转型升级需求、服务好广大消费者的个人金融需求。
+                </p>
+            </section>
+            <section class="product-service">
+                <h2> 产品及服务</h2>
+                <ul class="product">
+                    <li>
+                        <h3> 产业金融</h3>
+                        <strong>数字驱动产业升级</strong>
+                        <p>
+                            运用大数据、AI、区块链等科技,为核心企业和行业B2B平台定制全链条、一站式金融解决方案</p>
+                        <a href="#">查看详情</a>
+                    </li>
+                    <li>
+                        <h3>金融科技</h3>
+                        <strong>科技重构价值</strong>
+                        <p> 科技携手金融，打造产业金融数字化平台</p>
+                        <a href="#">查看详情</a>
+
+                    </li>
+                    <li>
+                        <h3>财富</h3>
+                        <strong>星理财，心服务</strong>
+                        <p>综合性理财服务平台，为用户提供安全、专业、便捷的投资理财服务</p>
+                        <a href="#">查看详情</a>
+                    </li>
+                    <li>
+                        <h3>保险</h3>
+                        <strong>好保险，更划算</strong>
+                        <p> 创新型互联网保险服务，专业、全面、性价比高</p>
+                        <a href="#">查看详情</a>
+                    </li>
+                    <li>
+                        <h3> 钱包</h3>
+                        <strong> 优惠支付，智享生活</strong>
+                        <p>为用户提供便捷的交易及多样化的生活服务 </p>
+                        <a href="#"> 查看详情</a>
+                    </li>
+                </ul>
+                <Ul class="service">
+                    <li>
+                        <img src="./images/icon/1.cd34bcf.png" alt="">
+                        <h2>行稳致远</h2>
+                        <p>立足长远、敬畏风险</p>
+                    </li>
+                    <li>
+                        <img src="./images/icon/2.b5c137f.png" alt="">
+                        <h2>开放连接</h2>
+                        <p>践行普惠、服务实体 </p>
+                    </li>
+                    <li>
+                        <img src="./images/icon/3.f478f0c.png" alt="">
+                        <h2>技术立业</h2>
+                        <p>科技为先、安全高效</p>
+                    </li>
+                    <li>
+                        <img src="./images/icon/4.b85b0d4.png" alt="">
+                        <h2> 服务为重</h2>
+                        <p>用户第一、优化体验</p>
+                    </li>
+                </Ul>
+            </section>
+            <section class="partner">
+                <ul>
+                    <li><img src="images/yinhang/bank1.a87d4d7.png"></li>
+                    <li><img src="images/yinhang/bank10.2e45cd8.png"></li>
+                    <li><img src="images/yinhang/bank2.1e7d5f0.png"></li>
+                    <li><img src="images/yinhang/bank3.bf3f175.png"></li>
+                    <li><img src="images/yinhang/bank4.c30141c.png"></li>
+                    <li><img src="images/yinhang/bank5.2078417.png"></li>
+                    <li><img src="images/yinhang/bank6.0aaeef1.png"></li>
+                    <li><img src="images/yinhang/bank7.36291d2.png"></li>
+                    <li><img src="images/yinhang/bank8.1c7821b.png"></li>
+                    <li><img src="images/yinhang/bank9.253aab9.png"></li>
+                </ul>
+            </section>
+    </section>
+    </div>
+
+
+    <footer>
+        <div class="page">
+            <div class="hang1">
+                <div class="lan1">
+                    <h3>联系我们</h3>
+                    <p class="phone400">400-100-3399</p>
+
+                    <p class="time">周一至周日 9:00-19:00</p>
+                    <div class="lan2"></div>
+                    <ul>
+                        <li>消保委员会邮箱:mifi-cpcommittee@xiaomi.com</li>
+                        <li>商务合作:finance-service@xiaomi.com</li>
+                        <li>>联系地址:北京市海淀区毛纺路58号院小米总参</li>
+                    </ul>
+                </div>
+                <div class="lan2">
+                    <ul>
+                        <li><a href="">小米商城</a></li>
+                        <li><a href="">MIUI</a></li>
+                        <li><a href="">有品</a></li>
+                        <li><a href=""> IoT </a></li>
+                        <li><a href="">天星银行</a></li>
+                    </ul>
+
+                    <div class="erweima">
+                        <img src="./images/app-qrcode.2066a50">
+                        <span>天星数科公众号</span>
+                    </div>
+                    <div class="erweima">
+                        <img src="./images/shuke_qrcode.d869824">
+                        <span>天星金融App公众号</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hang2">
+                <p>经营证照 | Copyright © airstar.com 京ICP备19057461号</p>
+                <p>北京小米电子软件技术有限公司丨京公网安备11030102010662号 | 京ICP证B2-20201572号</p>
+
+            </div>
+        </div>
+    </footer>
+    <script>
+        //点击任何一个a标签的时候，让span移动到当前点击的a标签的下方
+        /*
+        1.调用第五个a标签
+        文档 的   通过id获取id为a5的元素
+        document.getElementById('a5')
+        2.拿到a5后，对a5添加一个特殊属性：事件属性
+         document.getElementById('a5').click
+         3.对发生事件属性的时候，我们要做点什么事情呢？
+         比如：点击a5的时候，我们希望做三件事：
+           改变a5的背景色document.getElementById('a5').style="background-color: blue";
+           改变a5的文字内容document.getElementById('a5').style="fontsize:"18px"";
+           改变a5的边框document.getElementById('a5').style="border:1px solid bl"
+        */
+        //    文档对象.id为a5的a元素.点击=执行一个函数，也就是执行大括号里的四行代码
+        document.getElementById('a1').onclick = function () {
+            document.getElementById('a1').style.fontWeight = "bold"
+            document.getElementById('a5').style.fontWeight = "400"
+            document.getElementById('a4').style.fontWeight = "400"
+            document.getElementById('a3').style.fontWeight = "400"
+            document.getElementById('a2').style.fontWeight = "400"
+            document.getElementById('a6').style.fontWeight = "400"
+            // document.getElementById('span1').style.left="0px"
+
+        }
+        document.getElementById('a2').onclick = function () {
+            document.getElementById('a2').style.fontWeight = "bold"
+            document.getElementById('a5').style.fontWeight = "400"
+            document.getElementById('a4').style.fontWeight = "400"
+            document.getElementById('a3').style.fontWeight = "400"
+            document.getElementById('a1').style.fontWeight = "400"
+            document.getElementById('a6').style.fontWeight = "400"
+
+        }
+        document.getElementById('a3').onclick = function () {
+            document.getElementById('a3').style.fontWeight = "bold"
+            document.getElementById('a5').style.fontWeight = "400"
+            document.getElementById('a4').style.fontWeight = "400"
+            document.getElementById('a2').style.fontWeight = "400"
+            document.getElementById('a1').style.fontWeight = "400"
+            document.getElementById('a6').style.fontWeight = "400"
+
+        }
+
+        document.getElementById('a4').onclick = function () {
+            document.getElementById('a4').style.fontWeight = "bold"
+            document.getElementById('a5').style.fontWeight = "400"
+            document.getElementById('a3').style.fontWeight = "400"
+            document.getElementById('a2').style.fontWeight = "400"
+            document.getElementById('a1').style.fontWeight = "400"
+            document.getElementById('a6').style.fontWeight = "400"
+
+
+        }
+        document.getElementById('a5').onclick = function () {
+            // 文档对象，id为a5的a元素.样式.颜色=白色
+            document.getElementById('a5').style.fontWeight = "bold"
+            document.getElementById('a4').style.fontWeight = "400"
+            document.getElementById('a3').style.fontWeight = "400"
+            document.getElementById('a2').style.fontWeight = "400"
+            document.getElementById('a1').style.fontWeight = "400"
+            document.getElementById('a6').style.fontWeight = "400"
+
+        }
+        document.getElementById('a6').onclick = function () {
+            document.getElementById('a6').style.fontWeight = "bold"
+            document.getElementById('a5').style.fontWeight = "400"
+            document.getElementById('a4').style.fontWeight = "400"
+            document.getElementById('a3').style.fontWeight = "400"
+            document.getElementById('a2').style.fontWeight = "400"
+            document.getElementById('a1').style.fontWeight = "400"
+
+
+        }
+        var span1 = document.getElementById("a1")
+        var span2 = document.getElementById("a2")
+        var span3 = document.getElementById("a3")
+        var span4 = document.getElementById("a4")
+        var span5 = document.getElementById("a5")
+        var span6 = document.getElementById("a6")
+        var line = document.getElementById("line")
+        var w1 = span1.offsetWidth
+        line.style.width = w1 + "px"
+        span1.onclick = function () {
+            // 3获取span1的left的值
+            var l = span1.offsetLeft
+            var w = span1.offsetWidth
+            console.log(l)
+            // 4  修改line的left的值
+
+            line.style.left = l + "px"
+            line.style.width = w + "px"
+        }
+        span2.onclick = function () {
+            var l = span2.offsetLeft
+            var w = span2.offsetWidth
+            console.log(l)
+            line.style.left = l + "px"
+            line.style.width = w + "px"
+        }
+        span3.onclick = function () {
+
+            var l = span3.offsetLeft
+            var w = span3.offsetWidth
+            console.log(l)
+            line.style.left = l + "px"
+            console.log(line.style.left)
+            line.style.width = w + "px"
+        }
+        span4.onclick = function () {
+            var l = span4.offsetLeft
+            var w = span4.offsetWidth
+            console.log(l)
+            line.style.left = l + "px"
+            line.style.width = w + "px"
+        }
+        span5.onclick = function () {
+            var l = span5.offsetLeft
+            var w = span5.offsetWidth
+            console.log(l)
+            line.style.left = l + "px"
+            line.style.width = w + "px"
+        }
+        span6.onclick = function () {
+            var l = span6.offsetLeft
+            var w = span6.offsetWidth
+            console.log(l)
+            line.style.left = l + "px"
+            line.style.width = w + "px"
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form action="abc.html" method="post">
+        <!-- placeholder="用户名" -->
+        <input id='username' name='username' type="text" value='' placeholder="用户名">
+        <input id="pwd" name='pwd' type="password" value='' placeholder="密码">
+        <!-- <input id="btn" type="submit" value='确定'> -->
+        <button id="btn">提交</button>
+        <!-- </form> -->
+        <script>
+     < !--获取元素 -->
+        var username = document.getElementById(' username')
+            var pwd = document.getElementById(' pwd')
+            var btn = document.getElementById(' btn')
+            // 点击按钮，读取input的value值，并把value值写入页面boay.write()
+
+            btn.onclick = function () {
+                //  conSole.log(username.value)
+                //  conSole.log(pwd.value)
+                document.write('用户名：' + username.value, '密码;' + pwd.value)
+
+            }
+        </script>
+</body>
+
+</html>
